@@ -1,4 +1,4 @@
-package com.windsurf;
+package com.windsurf.entities;
 
 /**
  * Created by didierbaczynski on 2016-05-23.
