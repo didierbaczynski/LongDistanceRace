@@ -1,13 +1,9 @@
 package com.windsurf.config;
 
 import com.windsurf.entities.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by didierbaczynski on 16-05-29.
@@ -18,11 +14,11 @@ import java.util.List;
 public class AppConfig {
     @Bean
     public LongDistanceRace race() {
-        List<Racer> racers = new LinkedList<Racer>();
-        racers.add(didier());
-        racers.add(mario());
-        racers.add(krunosh());
-        return new OBXRace(racers);
+        LongDistanceRace race_1 = new OBXRace();
+        race_1.addRacer(didier());
+        race_1.addRacer(mario());
+        race_1.addRacer(krunosh());
+        return race_1;
     }
 
     @Bean

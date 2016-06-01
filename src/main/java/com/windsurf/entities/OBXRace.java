@@ -9,18 +9,14 @@ import java.util.List;
 public class OBXRace implements LongDistanceRace {
     List<Racer> racers = new LinkedList<>();
 
-    public OBXRace(List<Racer> racers) {
-        this.racers = racers;
-    }
-
     @Override
     public void addRacer(Racer racer) {
         racers.add(racer);
     }
 
     @Override
-    public Racer[] runRace() {
-        return (Racer[]) racers.toArray();
+    public List<Racer> runRace() {
+        return racers;
     }
 
 }
